@@ -1,0 +1,76 @@
+<div
+  class="d-flex justify-content-center align-items-center flex-column m-5 border border-primary rounded"
+>
+  <div class="d-flex justify-content-center align-items-center">
+    <div class="p-4 fs-1">
+      <div>{{ hours }} h</div>
+      <div class="mt-2 d-flex justify-content-center align-items-center">
+        <button
+          class="btn btn-outline-primary border-0 fs-2 w-50 d-flex justify-content-center align-items-center"
+          (click)="addNum('H')"
+          [disabled]="disabled"
+        >
+          +
+        </button>
+        <button
+          class="btn btn-outline-primary border-0 fs-2 w-50 d-flex justify-content-center align-items-center"
+          (click)="removeNum('H')"
+          [disabled]="disabled"
+        >
+          -
+        </button>
+      </div>
+    </div>
+
+    <div class="p-4 fs-1">
+      <div>{{ minutes }} m</div>
+      <div class="mt-2 d-flex justify-content-center align-items-center">
+        <button
+          class="btn btn-outline-primary border-0 fs-2 w-50 d-flex justify-content-center align-items-center"
+          (click)="addNum('M')"
+          [disabled]="disabled"
+        >
+          +
+        </button>
+        <button
+          class="btn btn-outline-primary border-0 fs-2 w-50 d-flex justify-content-center align-items-center"
+          (click)="removeNum('M')"
+          [disabled]="disabled"
+        >
+          -
+        </button>
+      </div>
+    </div>
+    <div class="p-4 fs-1">
+      <div>{{ seconds }} s</div>
+      <div class="mt-2 d-flex justify-content-center align-items-center">
+        <button
+          class="btn btn-outline-primary border-0 fs-2 w-50 d-flex justify-content-center align-items-center"
+          (click)="addNum('S')"
+          [disabled]="disabled"
+        >
+          +
+        </button>
+        <button
+          class="btn btn-outline-primary border-0 fs-2 w-50 d-flex justify-content-center align-items-center"
+          (click)="removeNum('S')"
+          [disabled]="disabled"
+        >
+          -
+        </button>
+      </div>
+    </div>
+  </div>
+  <div>
+    <button
+      class="btn btn-outline-danger fs-2 m-2"
+      (click)="startTime()"
+      [disabled]="disabled"
+    >
+      Start
+    </button>
+    <button class="btn btn-outline-danger fs-2 m-2" (click)="stopTime()">
+      Reset
+    </button>
+  </div>
+</div>
